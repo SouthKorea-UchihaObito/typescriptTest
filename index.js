@@ -75,3 +75,15 @@ let 학교 = {
     teacher: 'shim jaehun',
     friend: 'jim',
 };
+function 함수(x) {
+}
+// 함수에서 void 타입 활용가능
+// 아무것도 return 하지 못하게 지정해주는 타입 실수로 뭔가 return 하는걸 막아줌
+// 타입 지정된 파라미터는 필수
+// 파라미터가 옵션일 경우에는 ? :타입 지정해놓을수 있음
+/* 중요 */
+/*
+    변수? :number는
+    변수:number | undefined 와 같음
+
+*/ 
