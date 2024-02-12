@@ -76,11 +76,66 @@ let 학교 = {
     friend: 'jim',
 };
 function 함수(x) {
+    if (x) {
+        console.log('이름 있음');
+    }
+    else {
+        console.log('이름 없음');
+    }
 }
+function 함수2(x) {
+    if (x) {
+        console.log('이름있음' + x);
+    }
+    else {
+        console.log('이름 없음');
+    }
+}
+let numb = 12345;
+let numbStr = null;
+numb = numb.toString();
+numbStr = numb.length;
+function 자릿수출력(x) {
+    // x = x;
+    // let newNum : number | String | undefined = null
+    // x = x.toString();
+    // newNum = x.length;
+    return x.toString().length;
+}
+console.log(자릿수출력(55555));
+자릿수출력(222);
+/*
+
+1. 함수의 파라미터로 월소득(만원단위), 집보유여부(true/false), 매력점수 ('상' or '중' or '하') 를 입력할 수 있어야합니다.
+
+2. 월소득은 만원 당 1점, 집보유시 500점 & 미보유시 0점, 매력점수는 '상'일 때만 100점으로 계산합니다.
+
+3. 총 점수가 600점 이상일 경우 "결혼가능"을 return 해줘야합니다. 그 외엔 아무것도 return하지 않습니다.
+
+ 
+
+(예시)
+
+결혼가능하냐(700, false, '중') 이렇게 사용할 경우 "결혼가능"을 return 해줍니다.
+
+결혼가능하냐(100, false, '상') 이렇게 사용할 경우 아무것도 return되지 않습니다.
+
+*/
+function 매력(월소득, 집보유여부, 매력점수) {
+    return '가능';
+}
+console.log(매력(1, true, 1));
+/*
+
+function 함수(x? :number | string) : 여기에 타입지정 가능 {
+
+}
+*/
 // 함수에서 void 타입 활용가능
 // 아무것도 return 하지 못하게 지정해주는 타입 실수로 뭔가 return 하는걸 막아줌
 // 타입 지정된 파라미터는 필수
 // 파라미터가 옵션일 경우에는 ? :타입 지정해놓을수 있음
+// x옆에 ? 지정하면 파라미터 지정 할수도 안할수도 지정가능
 /* 중요 */
 /*
     변수? :number는
