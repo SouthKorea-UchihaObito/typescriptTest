@@ -120,20 +120,14 @@ function 자릿수출력(x) {
 결혼가능하냐(100, false, '상') 이렇게 사용할 경우 아무것도 return되지 않습니다.
 
 */
-function 매력(money, house, charm) {
+function 결혼가능유무(money, house, charm) {
     let score = 0;
     score += money;
     if (charm === "상") {
         score += 100;
     }
-    else {
-        score = 0;
-    }
     if (house === true) {
         score += 500;
-    }
-    else {
-        score = 0;
     }
     if (score >= 600) {
         return '결혼가능';
@@ -142,7 +136,7 @@ function 매력(money, house, charm) {
         return "결혼 불가능";
     }
 }
-console.log(매력(700, true, "중"));
+console.log(결혼가능유무(1, true, "상"));
 /*
 
 function 함수(x? :number | string) : 여기에 타입지정 가능 {

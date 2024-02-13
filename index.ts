@@ -150,22 +150,17 @@ function 자릿수출력(x: number | string) : number | string {
 결혼가능하냐(100, false, '상') 이렇게 사용할 경우 아무것도 return되지 않습니다.
 
 */
-function 매력(money : number, house : boolean , charm : string) : string{
+function 결혼가능유무(money : number, house : boolean , charm : string) : string{
     let score :number = 0;
 
     score += money;
 
     if(charm === "상"){
         score += 100
-    } else {
-        score = 0
-    }
-
+    } 
     if(house === true){
         score += 500
-    } else {
-        score = 0
-    }
+    } 
     if(score >= 600){
         return '결혼가능'
     } else {
@@ -173,7 +168,7 @@ function 매력(money : number, house : boolean , charm : string) : string{
     }
 
 }
-console.log(매력(700,true,"중"))
+console.log(결혼가능유무(1,true,"상"))
 
 /*
 
