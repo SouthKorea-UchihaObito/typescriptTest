@@ -57,12 +57,20 @@ function LastSubject(people) {
         집어넣으면 맨뒤 과목 1개를 return 해줘야함
     */
     // 타입지정 
+    // console.log(people)-
     if (typeof people === 'object') {
-        return people;
+        return people.subject;
+    }
+    else if (Array.isArray(people)) {
+        return 'people.subject';
     }
     else {
-        return '오브젝트 아님';
+        return '오브젝트도 배열도 아니네요';
     }
 }
-console.log(people1);
-console.log(LastSubject(people2));
+console.log(LastSubject({ subject: ['science', 'art', 'korean'] }));
+/*
+    만들함수( { subject : 'math' } )  //이 경우 'math'를 return
+    만들함수( { subject : ['science', 'art', 'korean'] } ) //이 경우 'korean'을 return
+    만들함수( { hello : 'hi' } )  //이 경우 타입에러 나면 됩니다
+*/ 
