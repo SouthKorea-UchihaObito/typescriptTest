@@ -58,17 +58,18 @@ function LastSubject(people) {
     */
     // 타입지정 
     // console.log(people)-
-    if (typeof people === 'object') {
+    if (typeof people.subject === 'string') {
         return people.subject;
     }
-    else if (Array.isArray(people)) {
-        return 'people.subject';
+    else if (Array.isArray(people.subject)) {
+        return people.subject[people.subject.length - 1];
     }
     else {
         return '오브젝트도 배열도 아니네요';
     }
 }
-console.log(LastSubject({ subject: ['science', 'art', 'korean'] }));
+console.log(people2.subject[people2.subject.length - 1]);
+console.log(LastSubject({ subject: 'math' }));
 /*
     만들함수( { subject : 'math' } )  //이 경우 'math'를 return
     만들함수( { subject : ['science', 'art', 'korean'] } ) //이 경우 'korean'을 return

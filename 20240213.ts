@@ -54,7 +54,7 @@ let people1 : {subject : string} = {subject : 'math'};
 let people2 : {subject : string[]} = {subject : ['science', 'english']};
 let people3 : {subject : string[]} = {subject : ['science', 'art', 'korean']};
 
-function LastSubject(people : { subject:string | string []}) : unknown {
+function LastSubject(people :{subject : string | string []}) : unknown {
     /* 
         people1 같은 object 자료를 파라미터로
         집어넣으면 맨뒤 과목 1개를 return 해줘야함
@@ -62,18 +62,19 @@ function LastSubject(people : { subject:string | string []}) : unknown {
     // 타입지정 
     // console.log(people)-
     
-    if(typeof people === 'object' ) {
+    if(typeof people.subject === 'string' ) {
         
         return people.subject;
-    } else if(Array.isArray(people)){
-        return 'people.subject';
+    } else if(Array.isArray(people.subject)){
+        return people.subject[people.subject.length -1]
     } else {
         return '오브젝트도 배열도 아니네요';
     }
      
 }
+console.log(people2.subject[people2.subject.length -1])
 
-console.log(LastSubject({ subject : ['science', 'art', 'korean']}))
+console.log(LastSubject({subject : 'math'}))
 
 /*
     만들함수( { subject : 'math' } )  //이 경우 'math'를 return
